@@ -1,69 +1,179 @@
-import React from 'react'
+import React from 'react';
 import {
-    View,
-    Text,
-    ImageBackground,
+	View,
     StyleSheet,
+    TextInput,
     ScrollView
-} from 'react-native'
+} from 'react-native';
 
-//Assets
-import background from '../../assets/imgs/bg.jpg'
+//Components
+import Header from '../components/Feed/Menu/Header'
+import Menu from '../components/Feed/Menu/Menu'
 
 export default function Feed({ navigation }) {
-    return (
-        <ImageBackground source={background} style={styles.background}>
-            <View style={styles.container}>
-
-                <View style={styles.header}></View>
-
-                <View style={styles.containerEvents}>
-                    <ScrollView>
-                        <View style={styles.box}></View>
-                        <View style={styles.box}></View>
-                        <View style={styles.box}></View>
-                    </ScrollView>
-                </View>
-
+	return (
+		<View style={styles.container}>
+            <View style={styles.header}>
+                <Header />
+                <Menu />
             </View>
-        </ImageBackground>
-    )
+
+			<View style={styles.containerEvents}>
+                <ScrollView>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="    senha"
+                        placeholderTextColor="#DDDDDD"
+                        secureTextEntry={true}
+                    />
+                </ScrollView>
+			</View>
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        width: null,
-        height: null
-    },
 
-    container: {
-        flex: 1,
+	container: {
+		flex: 1,
         justifyContent: 'flex-start',
-    },
-
+		backgroundColor: '#EBEBEB',
+        
+	},
+    
     header: {
-        flex: 1,
-        backgroundColor: '#222222'
+        flex: 1.8,
+        backgroundColor: '#5257f2',
+        borderBottomRightRadius: 50,
+        borderBottomLeftRadius: 50
     },
 
-    containerEvents: {
-        flex: 5,
-        justifyContent: 'flex-start'
+	containerEvents: {
+		flex: 7,
+		justifyContent: 'flex-start',
+		backgroundColor: '#EBEBEB',
     },
 
-    box: {
-        flex: 2,
-        backgroundColor: 'white',
-        borderRadius: 10,
-        marginHorizontal: 15,
-        marginBottom: 15,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        shadowColor: '#FFFFFF',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.9,
-        shadowRadius: 5,
-        elevation: 3,
-    },
-})
+    input: {
+        marginTop: 10,
+        marginHorizontal: 30,
+        borderBottomWidth: 2,
+        borderBottomLeftRadius: 10,
+        borderBottomColor: '#DDDDDD',
+        fontSize: 16,
+      },
+});
