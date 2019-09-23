@@ -49,6 +49,7 @@ export default function Authenticate({navigation}) {
               placeholderTextColor="#DDDDDD"
               autoCompleteType="email"
               textContentType="emailAddress"
+              returnKeyType="next"
               autoFocus={true}
               value={email}
               onChangeText={setEmail}
@@ -58,6 +59,7 @@ export default function Authenticate({navigation}) {
               placeholder="    senha"
               placeholderTextColor="#DDDDDD"
               secureTextEntry={true}
+              returnKeyType="done"
               value={password}
               onChangeText={setPassword}
             />

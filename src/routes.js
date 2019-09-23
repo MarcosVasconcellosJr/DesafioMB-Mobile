@@ -10,8 +10,8 @@ import Feed from './screens/Feed'
 //Routes for screens navigation
 export default createAppContainer(
     createSwitchNavigator({
-        Feed,
         Opening,
+        Feed,
         Signin,
         Signup,
     })
