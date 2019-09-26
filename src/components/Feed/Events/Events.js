@@ -1,20 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+
 import {
     Text,
     TouchableOpacity,
     View,
-    ScrollView,
     StyleSheet,
     Image,
     Dimensions
 } from 'react-native';
 
 import { Fonts } from '../../../utils/fonts'
+
 const {height, width} = Dimensions.get('window')
+
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-function Event() {
-    const [subscribed, setSubscribed] = useState(false)
+export default function Event({ event, navigation }) {
+
+    function screenDetailEvent(){
+        navigation.navigate('DetailEvent', {event})
+    }
 
     return (
         <View style={styles.container}>
@@ -22,18 +27,16 @@ function Event() {
 
                 <View style={styles.eventInfo}>
 
-                    <Image style={styles.eventImage} source={{ uri: `https://aprendizdepromoter.files.wordpress.com/2010/08/eventos.jpg`}}/>
+                    <Image style={styles.eventImage} source={{ uri: event.imageLink }}/>
                     
                     <View style={styles.informations}>
-                        <Text style={styles.title} numberOfLines={1}>Rock in Rio</Text>
-                        <Text style={styles.theme} numberOfLines={1}>Rolling Stones</Text>
-                        <Text style={styles.info} numberOfLines={1}>Rio de Janeiro</Text>
-                        <Text style={styles.info} numberOfLines={1}>Música</Text>
-                        <Text style={styles.info} numberOfLines={2}>O Rock in Rio é o maior evento de música e entretenimento do mundo. Criado em 1985 e com 31 anos de vida, é parte relevante da história da música mundial. O Rock in Rio Brasil 2019 acontecerá nos dias 27, 28 e 29 de setembro, 3, 4, 5 e 6 de outubro de 2019, na Cidade do Rock, na Barra da Tijuca.</Text>
+                        <Text style={styles.date}>{event.date}</Text>
+                        <Text style={styles.title} numberOfLines={2}>{event.title}</Text>
+                        <Text style={styles.subTitle} numberOfLines={2}>{event.subTitle}</Text>
                     </View>
 
                     <View style={styles.eventActions}>
-                        {subscribed && <Icon name="check" color='#13E1B0' size={20} />}
+                        <Icon name="check" color='#13E1B0' size={20} />
                     </View>
 
                 </View>
@@ -41,22 +44,22 @@ function Event() {
                 <View style={styles.eventFooter}>
                     <View style={styles.footerContainers}>
                         <Text style={styles.footerContainerText}>Preço</Text>
-                        <Text style={styles.priceText}>$78</Text>
+                        <Text style={styles.priceText}>${event.price}</Text>
                     </View>
 
                     <View style={styles.footerContainers}>
                         <Text style={styles.footerContainerText}>Ingressos</Text>
-                        <Text style={styles.unsold}>15</Text>
+                        <Text style={styles.unsold}>{event.unsold}</Text>
                     </View>
 
                     <View style={styles.footerContainers}>
                         <Text style={styles.footerContainerText}>Duração</Text>
-                        <Text style={styles.priceText}>15m</Text>
+                        <Text style={styles.priceText}>{event.duration}</Text>
                     </View>
 
-                    <TouchableOpacity onPress={setSubscribed}>
+                    <TouchableOpacity onPress={screenDetailEvent}>
                         <View style={styles.btn}>
-                            <Text style={styles.btnText}>Comprar</Text>
+                            <Text style={styles.btnText}>Ver mais</Text>
                         </View>
                     </TouchableOpacity>
 
@@ -87,6 +90,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.9,
         shadowRadius: 5,
+        color: '#701710'
     },
     
     eventImage:{
@@ -199,8 +203,15 @@ const styles = StyleSheet.create({
     btnText: {
         color: '#EBEBEB',
         fontSize: 13,
-        fontFamily: Fonts.ProductSans_Medium
+        fontFamily: Fonts.ProductSans_Medium20
     },
-})
 
-export default Event
+    subTitle: {
+        color: '#666666',
+        fontSize: 14
+    },
+    date: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    }
+})

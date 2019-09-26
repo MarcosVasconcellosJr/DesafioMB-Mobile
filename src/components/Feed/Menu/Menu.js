@@ -14,8 +14,7 @@ function Header() {
                 <Text style={styles.pickerLabelText}>Categoria</Text>
 
                 <View style={styles.pickerLayout}>
-                    <Picker style={styles.picker} mode='dropdown' selectedValue={city} onValueChange={setCity}
-                    >
+                    <Picker style={styles.picker} mode='dropdown' selectedValue={city} onValueChange={setCity}>
                         <Picker.Item color='#525252' label="Tecnologia" value="tecnologia" />
                         <Picker.Item color='#525252' label="Corporativo" value="corporativo " />
                         <Picker.Item color='#525252' label="Espiritual" value="espiritual " />
