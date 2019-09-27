@@ -11,8 +11,8 @@ import {
 } from 'react-native';
 
 //Assets
-import { Fonts } from '../utils/fonts';
-import background from '../../assets/imgs/bg2.jpg';
+import { Fonts } from '../../utils/fonts';
+import background from '../../../assets/imgs/bg2.jpg'
 
 export default function Authenticate({ navigation }) {
 	const [name, setName] = useState('');

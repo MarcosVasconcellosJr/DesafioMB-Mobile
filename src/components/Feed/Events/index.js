@@ -16,7 +16,7 @@ const {height, width} = Dimensions.get('window')
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function Event({ event, navigation }) {
-
+    
     function screenDetailEvent(){
         navigation.navigate('DetailEvent', {event})
     }
@@ -64,9 +64,7 @@ export default function Event({ event, navigation }) {
                     </TouchableOpacity>
 
                 </View>
-
             </View>
-
         </View>
     )
 }

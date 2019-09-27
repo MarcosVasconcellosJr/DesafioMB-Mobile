@@ -10,7 +10,7 @@ const reducer = (state = inicialState, action) => {
             return {
                 ...state,
                 eventList: action.payload
-            };
+            }
         default:
             return state
     }

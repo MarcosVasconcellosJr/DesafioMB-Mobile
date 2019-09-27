@@ -7,6 +7,7 @@ const inicialState = {
   age: null,
   city: null,
   cash: null,
+  likes: [],
 };
 
 const reducer = (state = inicialState, action) => {
@@ -20,6 +21,7 @@ const reducer = (state = inicialState, action) => {
         age: action.payload.age,
         city: action.payload.city,
         cash: action.payload.cash,
+        likes: action.payload.likes,
       };
     case USER_LOGGED_OUT:
       return {
@@ -30,6 +32,7 @@ const reducer = (state = inicialState, action) => {
         age: null,
         city: null,
         cash: null,
+        likes: null,
       };
     default:
       return state;

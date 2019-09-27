@@ -6,17 +6,16 @@ export default styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#5257f2'
+        backgroundColor: '#5257f2',
     },
 
     box: {
-        flex: 8,
+        flex: 10,
         backgroundColor: 'white',
-        borderRadius: 15,
-        marginHorizontal: width * 0.0341,
-        marginBottom: 20,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         shadowColor: '#FFFFFF',
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.9,
@@ -25,35 +24,26 @@ export default styles = StyleSheet.create({
     },
 
     eventImage: {
-        flex: 1,
-        height: null,
+        flex: 1.5,
+        height: 200,
         width: null,
         borderRadius: 15,
         marginHorizontal: width * 0.0287,
         marginTop: height * 0.01735,
     },
 
-    eventInfo: {
-        flex: 3,
-        marginHorizontal: 15
-    },
-
     informations: {
+        flex: 2,
+        marginRight: 27,
+        paddingHorizontal: 15,
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         marginTop: height * 0.01735,
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        borderWidth: 1,
-        borderColor: 'white',
-        overflow: 'hidden'
     },
 
     title: {
         fontFamily: Fonts.ProductSans_Medium,
-        fontWeight: 'normal',
+        fontWeight: 'bold',
         fontSize: 22,
         color: '#2D3057'
     },
@@ -72,33 +62,6 @@ export default styles = StyleSheet.create({
         color: '#2D3057'
     },
 
-    footerContainers: {
-        borderRadius: 15,
-        borderColor: '#DDE3F6',
-        overflow: 'hidden',
-        borderWidth: 1.5,
-        height: (width * 0.9324 / 2) * 0.2072,
-        width: width * 0.1473,
-        marginBottom: (width * 0.9324 / 2) * 0.0518,
-        marginTop: (width * 0.9324 / 2) * 0.06904,
-        marginHorizontal: 15,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    eventActions: {
-        width: width * 0.0607,
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        marginTop: height * 0.0173,
-        alignItems: 'center'
-    },
-
-    footerContainerText: {
-        fontFamily: Fonts.ProductSans_Medium,
-        fontSize: 10
-    },
-
     priceText: {
         fontFamily: Fonts.ProductSans_Bold,
         fontSize: 17,
@@ -114,18 +77,18 @@ export default styles = StyleSheet.create({
     },
 
     btn: {
-        flex: 1,
+        height: 40,
         backgroundColor: '#13E1B0',
-        borderRadius: 15,
-        marginBottom: (width * 0.9324 / 2) * 0.0518,
-        marginTop: (width * 0.9324 / 2) * 0.06904,
+        marginBottom: 15,
         marginHorizontal: 15,
+        borderRadius: 15,
         justifyContent: 'center',
     },
 
     btnText: {
         color: 'white',
-        fontSize: 13,
+        textAlign: 'center',
+        fontSize: 22,
         fontFamily: Fonts.ProductSans_Medium20,
         fontWeight: 'bold'
     },
@@ -167,14 +130,34 @@ export default styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        marginRight: 20,
-        marginBottom: 10
+        marginRight: 19,
+        marginBottom: 10,
     },
 
     infoSubContainer: {
         alignItems: 'flex-start',
         justifyContent: 'center',
-        marginRight: 15
-    }
+    },
 
+    categoryContainer: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+    },
+
+    infoContainer1: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        marginRight: 20,
+        marginBottom: 10
+    },
+
+    especialInfo: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10
+    },
 })
