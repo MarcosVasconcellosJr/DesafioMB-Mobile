@@ -30,7 +30,7 @@ export default styles = StyleSheet.create({
     },
 
     box: {
-        flex: 3,
+        flex: 1.2,
         backgroundColor: '#EBEBEB',
         borderRadius: 10,
         marginBottom: 50,
@@ -59,7 +59,8 @@ export default styles = StyleSheet.create({
 
     inputsView: {
         flex: 2,
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
+        
     },
 
     input: {
@@ -95,7 +96,7 @@ export default styles = StyleSheet.create({
 
     signup: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         marginHorizontal: 50,
     },
 

@@ -1,17 +1,61 @@
-import { USER_LOGGED_IN, USER_LOGGED_OUT } from './actionTypes'
+import { USERS_GET_LIST, ADD_USER } from './actionTypes'
+import { USER_LOGGED_IN, USER_LOGGED_OUT,  } from './actionTypes'
 
-export const getUsers = () => {
+export function getUsers() {
     return {
-        type: USER_LOGGED_IN,
+        type: USERS_GET_LIST,
         payload: [
-            
+            {
+                name: 'admin',
+                email: 'admin@gmail.com',
+                password: 'admin',
+                age: '18',
+                city: 'Sumaré',
+                cash: '500',
+                likes: ['1','2','3','4'],
+                datePreferred: '',
+            },
+            {
+                name: 'marcos',
+                email: 'marcos@gmail.com',
+                password: 'marcos',
+                age: '19',
+                city: 'Sumaré',
+                cash: '20',
+                likes: ['1','4','7','8'],
+                datePreferred: '',
+            }
         ]
     }
 }
 
-export const logout = user => {
+export const addUser = (users, user) => {
+
+    users.push(user)
+
     return {
-        type: USER_LOGGED_OUT,
-        payload: user
+        type: ADD_USER,
+        payload: users
+    }
+}
+
+export const login = (user, userList) => {
+
+    let tam = userList.length
+    for(var i=0; i<tam; i++) {
+        if(userList[i].email === user.email) {
+            if(userList[i].password === user.password){
+                return {
+                    type: USER_LOGGED_IN,
+                    payload: user
+                }
+            }
+        }
+    }
+}
+
+export const logout = () => {
+    return {
+        type: USER_LOGGED_OUT
     }
 }

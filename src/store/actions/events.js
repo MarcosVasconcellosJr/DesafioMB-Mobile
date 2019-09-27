@@ -1,6 +1,6 @@
 import { EVENT_GET_LIST } from './actionTypes'
 
-export function getList() {
+export function getEvents() {
     return {
         type: EVENT_GET_LIST,
         payload: [
@@ -15,7 +15,8 @@ export function getList() {
                 price: '100',
                 unsold: '19',
                 duration: '90m',
-                date: 'SET 19',
+                date: '19/09/2019',
+                dateFormated: 'SET 19',
                 responsibleEntity: 'Rock enterprise',
                 subscribed: []
             },
@@ -30,7 +31,8 @@ export function getList() {
                 price: '700',
                 unsold: '20',
                 duration: '60m',
-                date: 'NOV 15',
+                date: '15/11/2019',
+                dateFormated: 'NOV 15',
                 responsibleEntity: 'Unip - Universidade Paulista',
                 subscribed: []
             },
@@ -45,7 +47,8 @@ export function getList() {
                 price: '0',
                 unsold: '503',
                 duration: '120m',
-                date: 'NOV 15',
+                date: '15/11/2019',
+                dateFormated: 'NOV 15',
                 responsibleEntity: 'OAB Campinas',
                 subscribed: []
             },
@@ -60,7 +63,8 @@ export function getList() {
                 price: '30',
                 unsold: '20',
                 duration: '60m',
-                date: 'NOV 15',
+                date: '16/11/2019',
+                dateFormated: 'NOV 16',
                 responsibleEntity: 'TED TALKS',
                 subscribed: []
             },
@@ -75,8 +79,9 @@ export function getList() {
                 price: '700',
                 unsold: '20',
                 duration: '20m',
-                date: 'NOV 15',
-                responsibleEntity: 'Rock enterprise',
+                date: '02/11/2019',
+                dateFormated: 'NOV 02',
+                responsibleEntity: 'Comunidade evangélica de Nilópolis',
                 subscribed: []
             },
             {
@@ -90,7 +95,8 @@ export function getList() {
                 price: '99',
                 unsold: '57',
                 duration: '300m',
-                date: 'SEP 26',
+                date: '26/09/2019',
+                dateFormated: 'SET 26',
                 responsibleEntity: 'Jockey Club',
                 subscribed: []
             },
@@ -105,7 +111,8 @@ export function getList() {
                 price: '0',
                 unsold: '227',
                 duration: '240m',
-                date: 'SEP 28',
+                date: '28/09/2019',
+                dateFormated: 'SET 28',
                 responsibleEntity: 'Faculdade São Leopoldo Mandic',
                 subscribed: []
             },
@@ -120,7 +127,8 @@ export function getList() {
                 price: '0',
                 unsold: '200',
                 duration: '120m',
-                date: 'JAN 30',
+                date: '01/12/2019',
+                dateFormated: 'JAN 30',
                 responsibleEntity: 'Segunda Igreja Batista de Sumaré - SIBS',
                 subscribed: []
             },
@@ -135,7 +143,8 @@ export function getList() {
                 price: '24',
                 unsold: '185',
                 duration: '300m',
-                date: 'DEC 01',
+                date: '01/12/2019',
+                dateFormated: 'DEC 01',
                 responsibleEntity: 'Circuito Anime Fest e Avalon Eventos',
                 subscribed: []
             },
@@ -150,22 +159,24 @@ export function getList() {
                 price: '0',
                 unsold: '150',
                 duration: '420m',
-                date: 'SEP 29',
-                responsibleEntity: 'CAR CLUB CAMPINAS',
+                date: '01/12/2019',
+                dateFormated: 'SEP 29',
+                responsibleEntity: 'Car Club Campinas',
                 subscribed: []
             },
             {
                 id: '11',
                 imageLink: 'https://www.casalucci.com.br/wp-content/uploads/2019/03/festas-1200x675.jpg',
                 title: 'Kombate',
-                subTitle: 'A festa vai ser pokasideias e muita lacração!',
+                subTitle: 'A festa vai ser pokasideias e muita lacração! Quem quiser aparecer traz um kit churrasco e a bebida',
                 local: 'Rua Armando Strazzacappa, 130, 13024-021 Campinas',
                 category: ['Entretenimento', 'Musica'],
                 description: 'A FECAU vem em peso patrocinar o maior duelo de pop e funk que a UNICAMP já viu! O bailão vai pegar fogo!',
                 price: '15',
                 unsold: '30',
-                duration: '480m',
-                date: 'SEP 29',
+                duration: '1D',
+                date: '29/09/2019',
+                dateFormated: 'SET 29',
                 responsibleEntity: 'FECAU',
                 subscribed: []
             },
@@ -180,54 +191,10 @@ export function getList() {
                 price: '180',
                 unsold: '125',
                 duration: '2d',
-                date: 'OCT 18',
+                date: '18/10/2019',
+                dateFormated: 'OUT 18',
                 responsibleEntity: 'VP Group',
                 subscribed: []
-            },
-            {
-                id: '13',
-                imageLink: 'https://i0.wp.com/www.zedudu.com.br/wp-content/uploads/2019/09/Desfile-de-7-de-Setembro-ser%C3%A1-realizado-%C3%A0-tarde-na-Pra%C3%A7a-de-Eventos.jpg?fit=788%2C466&ssl=1',
-                title: 'Onça Pintada',
-                subTitle: 'Rock in Rio',
-                local: 'Umuarama',
-                category: ['Entretenimento', 'Musica', 'Politica'],
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.',
-                price: '700',
-                unsold: '20',
-                duration: '20m',
-                date: 'NOV 15',
-                responsibleEntity: 'Rock enterprise',
-                subscribed: []
-            },
-            {
-                id: '14',
-                imageLink: 'https://i0.wp.com/www.zedudu.com.br/wp-content/uploads/2019/09/Desfile-de-7-de-Setembro-ser%C3%A1-realizado-%C3%A0-tarde-na-Pra%C3%A7a-de-Eventos.jpg?fit=788%2C466&ssl=1',
-                title: 'Onça Pintada',
-                subTitle: 'Rock in Rio',
-                local: 'Umuarama',
-                category: ['Entretenimento', 'Musica', 'Politica'],
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.',
-                price: '700',
-                unsold: '20',
-                duration: '20m',
-                date: 'NOV 15',
-                responsibleEntity: 'Rock enterprise',
-                subscribed: []
-            },
-            {
-                id: '15',
-                imageLink: 'https://i0.wp.com/www.zedudu.com.br/wp-content/uploads/2019/09/Desfile-de-7-de-Setembro-ser%C3%A1-realizado-%C3%A0-tarde-na-Pra%C3%A7a-de-Eventos.jpg?fit=788%2C466&ssl=1',
-                title: 'Onça Pintada',
-                subTitle: 'Rock in Rio',
-                local: 'Umuarama',
-                category: ['Entretenimento', 'Musica', 'Politica'],
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.',
-                price: '700',
-                unsold: '20',
-                duration: '20m',
-                date: 'NOV 15',
-                responsibleEntity: 'Rock enterprise',
-                subscribed: ['Carlos','Jão','Mané','Erequi','Derequi','Jaozin','Manezin','Tiozin']
             },
         ]
     }

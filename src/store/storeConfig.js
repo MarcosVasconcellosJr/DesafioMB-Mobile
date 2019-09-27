@@ -1,12 +1,12 @@
 import { createStore, combineReducers } from 'redux'
-import userReducer from './reducers/user'
 import eventReducer from './reducers/event'
+import usersReducer from './reducers/users'
 //Add others Reducers here !!
 
 
 const reducers = combineReducers({
-    user: userReducer,
     event: eventReducer, 
+    users: usersReducer
 })
 
 const storeConfig = () => {

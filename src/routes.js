@@ -13,12 +13,12 @@ import CalendarPicker from './screens/CalendarPicker/CalendarPicker'
 //Routes for screens navigation
 export default createAppContainer(
     createSwitchNavigator({
-        Feed,
         Opening,
+        Feed,
+        Signin,
         DetailEvent,
         CalendarPicker,
         DescriptionDetailed,
-        Signin,
         Signup,
     })
 );

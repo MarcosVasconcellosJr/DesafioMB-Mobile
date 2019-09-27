@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getList } from '../../store/actions/events'
+import { getEvents } from '../../store/actions/events'
 
 import {
     View,
@@ -16,25 +16,25 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 //Components
 import Menu from '../../components/Feed/Menu'
-import Event from '../../components/Feed/Events'
-
-
+import Event from '../../components/Feed/Event'
 
 
 export default function Feed({ navigation }) {
-    const [l, setl] = useState([])
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(getList())
+        dispatch(getEvents())
     }, [])
     
-
-
     const eventList = useSelector((state) => state.event)
-
+    console.log(eventList)
+    
     function screenCalendarPicker(){
         navigation.navigate('CalendarPicker')
+    }
+
+    function screenUserEvents(){
+        navigation.navigate('UserEvents', {eventList})
     }
 
    return (
@@ -48,7 +48,7 @@ export default function Feed({ navigation }) {
 
                     <Text style={styles.textHeader}>EVENTOS</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={screenUserEvents}>
                         <Image
                             style={styles.imageHeader}
                             source={{ uri: `https://scontent.fcpq11-1.fna.fbcdn.net/v/t1.0-9/18836031_1300011196781130_9167086581992927295_n.jpg?_nc_cat=109&_nc_oc=AQlC72YZDyIiVzNVje9pKDAkDFb45femFS_gT9N6WfFEhcX5wHDgIukpPJaWOPlymuw&_nc_ht=scontent.fcpq11-1.fna&oh=bf0eace129db794c5c80e325c103bbe3&oe=5E092070` }}>

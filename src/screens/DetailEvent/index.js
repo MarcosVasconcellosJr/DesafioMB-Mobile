@@ -163,6 +163,33 @@ export default function DetailEvent({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                         </View>
+                        <View style={styles.infoContainer}>
+                            <Icon name="format-title" color='#5257f2' size={30} style={styles.infoIcons} />
+                            <View style={styles.infoSubContainer}>
+                                <Text style={styles.subTitle} numberOfLines={5}>Outras Informações...</Text>
+                                <TouchableOpacity onPress={screenDescriptionExtended}>
+                                    <Text style={{ color: '#2D3057', fontWeight: 'bold' }}>Ver mais</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={styles.infoContainer}>
+                            <Icon name="format-title" color='#5257f2' size={30} style={styles.infoIcons} />
+                            <View style={styles.infoSubContainer}>
+                                <Text style={styles.subTitle} numberOfLines={5}>Outras Informações...</Text>
+                                <TouchableOpacity onPress={screenDescriptionExtended}>
+                                    <Text style={{ color: '#2D3057', fontWeight: 'bold' }}>Ver mais</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={styles.infoContainer}>
+                            <Icon name="format-title" color='#5257f2' size={30} style={styles.infoIcons} />
+                            <View style={styles.infoSubContainer}>
+                                <Text style={styles.subTitle} numberOfLines={5}>Outras Informações...</Text>
+                                <TouchableOpacity onPress={screenDescriptionExtended}>
+                                    <Text style={{ color: '#2D3057', fontWeight: 'bold' }}>Ver mais</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                     </View>
                 </ScrollView>
 
