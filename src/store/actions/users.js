@@ -41,8 +41,7 @@ export const addUser = (users, user) => {
 
 export const login = (user, userList) => {
 
-    let tam = userList.length
-    for(var i=0; i<tam; i++) {
+    for(var i = 0; i < userList.length; i++) {
         if(userList[i].email === user.email) {
             if(userList[i].password === user.password){
                 return {
@@ -52,6 +51,8 @@ export const login = (user, userList) => {
             }
         }
     }
+
+    return 1
 }
 
 export const logout = () => {

@@ -8,7 +8,7 @@ import {
     Text,
     TouchableOpacity,
     Image
-} from 'react-native';
+} from 'react-native'
 
 import styles from './styles'
 
@@ -21,20 +21,13 @@ import Event from '../../components/Feed/Event'
 
 export default function Feed({ navigation }) {
     const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(getEvents())
-    }, [])
+    dispatch(getEvents())
     
     const eventList = useSelector((state) => state.event)
     console.log(eventList)
     
     function screenCalendarPicker(){
         navigation.navigate('CalendarPicker')
-    }
-
-    function screenUserEvents(){
-        navigation.navigate('UserEvents', {eventList})
     }
 
    return (
@@ -48,7 +41,7 @@ export default function Feed({ navigation }) {
 
                     <Text style={styles.textHeader}>EVENTOS</Text>
 
-                    <TouchableOpacity onPress={screenUserEvents}>
+                    <TouchableOpacity>
                         <Image
                             style={styles.imageHeader}
                             source={{ uri: `https://scontent.fcpq11-1.fna.fbcdn.net/v/t1.0-9/18836031_1300011196781130_9167086581992927295_n.jpg?_nc_cat=109&_nc_oc=AQlC72YZDyIiVzNVje9pKDAkDFb45femFS_gT9N6WfFEhcX5wHDgIukpPJaWOPlymuw&_nc_ht=scontent.fcpq11-1.fna&oh=bf0eace129db794c5c80e325c103bbe3&oe=5E092070` }}>
@@ -63,6 +56,7 @@ export default function Feed({ navigation }) {
 
                 <FlatList
                     data={eventList.eventList}
+                    keyExtractor={item => item.id}
                     renderItem={({ item }) => <Event event={item} navigation={navigation} />}
                     showsVerticalScrollIndicator={false}
                     disableVirtualization={true}
@@ -74,4 +68,6 @@ export default function Feed({ navigation }) {
     );
 }
 
-// 
+
+// useEffect(() => {
+// }, [])

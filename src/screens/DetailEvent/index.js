@@ -7,17 +7,16 @@ import {
     Image,
     Linking,
     Alert,
-    ScrollView
+    ScrollView,
 } from 'react-native';
 
 import styles from './styles'
 
 import Icon1 from 'react-native-vector-icons/Entypo'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-// import { ScrollView } from 'react-native-gesture-handler';
 
 export default function DetailEvent({ navigation }) {
-    const [like, setLike] = useState(false)
+    const [like, setLike] = useState(false)c
 
     const event = navigation.getParam('event')
 
@@ -38,10 +37,10 @@ export default function DetailEvent({ navigation }) {
     }
 
     function handleLikeShareButton() {
-        Linking.canOpenURL(`whatsapp://send?text=E aí, tudo bem? \n\nQueria te mostrar esse evento sensacional que eu encontrei pra gente ir em ${event.date}, topa?\n\nO nome do evento é *${event.title}* e vai ser no local\n${event.local}`)
+        Linking.canOpenURL(`whatsapp://send?text=E aí, tudo bem? \n\nQueria te mostrar esse evento sensacional que eu encontrei pra gente ir em ${event.inicialDate}, topa?\n\nO nome do evento é *${event.title}* e vai ser no local\n${event.local}`)
             .then(supported => {
                 if (supported) {
-                    Linking.openURL(`whatsapp://send?text=E aí, tudo bem? \n\nQueria te mostrar esse evento sensacional que eu encontrei pra gente ir em ${event.date}, topa?\n\nO nome do evento é *${event.title}* e vai ser no local\n${event.local}`)
+                    Linking.openURL(`whatsapp://send?text=E aí, tudo bem? \n\nQueria te mostrar esse evento sensacional que eu encontrei pra gente ir em ${event.inicialDate}, topa?\n\nO nome do evento é *${event.title}* e vai ser no local\n${event.local}`)
                 } else {
                     Alert.alert("Não foi possível compartilhar o evento")
                 }
@@ -95,7 +94,8 @@ export default function DetailEvent({ navigation }) {
                         <View style={styles.infoContainer}>
                             <Icon name="calendar-today" color='#5257f2' size={30} style={styles.infoIcons} />
                             <View style={styles.infoSubContainer}>
-                                <Text style={[styles.title, { fontSize: 17 }]} numberOfLines={2}>{event.date}</Text>
+                                <Text style={[styles.title, { fontSize: 17 }]} numberOfLines={2}>{event.inicialDate}{event.endDate ? '-' : ''}</Text>
+                                <Text style={[styles.title, { fontSize: 17 }]} numberOfLines={2}>{event.endDate ? event.endDate : ''}</Text>
                             </View>
                         </View>
                         <View style={styles.infoContainer}>

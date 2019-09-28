@@ -15,7 +15,8 @@ export function getEvents() {
                 price: '100',
                 unsold: '19',
                 duration: '90m',
-                date: '19/09/2019',
+                inicialDate: '19/09/2019',
+                endDate: '',
                 dateFormated: 'SET 19',
                 responsibleEntity: 'Rock enterprise',
                 subscribed: []
@@ -31,7 +32,8 @@ export function getEvents() {
                 price: '700',
                 unsold: '20',
                 duration: '60m',
-                date: '15/11/2019',
+                inicialDate: '15/11/2019',
+                endDate: '',
                 dateFormated: 'NOV 15',
                 responsibleEntity: 'Unip - Universidade Paulista',
                 subscribed: []
@@ -47,7 +49,8 @@ export function getEvents() {
                 price: '0',
                 unsold: '503',
                 duration: '120m',
-                date: '15/11/2019',
+                inicialDate: '15/11/2019',
+                endDate: '',
                 dateFormated: 'NOV 15',
                 responsibleEntity: 'OAB Campinas',
                 subscribed: []
@@ -63,7 +66,8 @@ export function getEvents() {
                 price: '30',
                 unsold: '20',
                 duration: '60m',
-                date: '16/11/2019',
+                inicialDate: '16/11/2019',
+                endDate: '',
                 dateFormated: 'NOV 16',
                 responsibleEntity: 'TED TALKS',
                 subscribed: []
@@ -79,7 +83,8 @@ export function getEvents() {
                 price: '700',
                 unsold: '20',
                 duration: '20m',
-                date: '02/11/2019',
+                inicialDate: '02/11/2019',
+                endDate: '',
                 dateFormated: 'NOV 02',
                 responsibleEntity: 'Comunidade evangélica de Nilópolis',
                 subscribed: []
@@ -95,7 +100,8 @@ export function getEvents() {
                 price: '99',
                 unsold: '57',
                 duration: '300m',
-                date: '26/09/2019',
+                inicialDate: '26/09/2019',
+                endDate: '',
                 dateFormated: 'SET 26',
                 responsibleEntity: 'Jockey Club',
                 subscribed: []
@@ -111,7 +117,8 @@ export function getEvents() {
                 price: '0',
                 unsold: '227',
                 duration: '240m',
-                date: '28/09/2019',
+                inicialDate: '28/09/2019',
+                endDate: '',
                 dateFormated: 'SET 28',
                 responsibleEntity: 'Faculdade São Leopoldo Mandic',
                 subscribed: []
@@ -127,7 +134,8 @@ export function getEvents() {
                 price: '0',
                 unsold: '200',
                 duration: '120m',
-                date: '01/12/2019',
+                inicialDate: '01/12/2019',
+                endDate: '18/12/2019',
                 dateFormated: 'JAN 30',
                 responsibleEntity: 'Segunda Igreja Batista de Sumaré - SIBS',
                 subscribed: []
@@ -143,7 +151,8 @@ export function getEvents() {
                 price: '24',
                 unsold: '185',
                 duration: '300m',
-                date: '01/12/2019',
+                inicialDate: '01/12/2019',
+                endDate: '',
                 dateFormated: 'DEC 01',
                 responsibleEntity: 'Circuito Anime Fest e Avalon Eventos',
                 subscribed: []
@@ -159,7 +168,8 @@ export function getEvents() {
                 price: '0',
                 unsold: '150',
                 duration: '420m',
-                date: '01/12/2019',
+                inicialDate: '01/12/2019',
+                endDate: '',
                 dateFormated: 'SEP 29',
                 responsibleEntity: 'Car Club Campinas',
                 subscribed: []
@@ -175,7 +185,8 @@ export function getEvents() {
                 price: '15',
                 unsold: '30',
                 duration: '1D',
-                date: '29/09/2019',
+                inicialDate: '29/09/2019',
+                endDate: '',
                 dateFormated: 'SET 29',
                 responsibleEntity: 'FECAU',
                 subscribed: []
@@ -191,7 +202,8 @@ export function getEvents() {
                 price: '180',
                 unsold: '125',
                 duration: '2d',
-                date: '18/10/2019',
+                inicialDate: '18/10/2019',
+                endDate: '',
                 dateFormated: 'OUT 18',
                 responsibleEntity: 'VP Group',
                 subscribed: []

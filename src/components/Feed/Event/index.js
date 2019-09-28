@@ -30,7 +30,7 @@ export default function Event({ event, navigation }) {
                     <Image style={styles.eventImage} source={{ uri: event.imageLink }}/>
                     
                     <View style={styles.informations}>
-                        <Text style={styles.date}>{event.date}</Text>
+                        <Text style={styles.date}>{event.inicialDate}</Text>
                         <Text style={styles.title} numberOfLines={2}>{event.title}</Text>
                         <Text style={styles.subTitle} numberOfLines={2}>{event.subTitle}</Text>
                     </View>

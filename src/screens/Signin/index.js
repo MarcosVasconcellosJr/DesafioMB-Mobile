@@ -7,6 +7,7 @@ import {
     TouchableOpacity,
     ImageBackground,
     TextInput,
+    Alert
 } from 'react-native'
 
 //Estilization for this component
@@ -15,25 +16,35 @@ import styles from './styles'
 //Assets
 import background from '../../../assets/imgs/bg2.jpg'
 
+//Action for get users from redux-store
 import { getUsers } from '../../store/actions/users'
+
+//Action for login user to application
+import { login } from '../../store/actions/users'
 
 export default function Authenticate({ navigation }) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    
+
     const dispatch = useDispatch()
+
     useEffect(() => {
         dispatch(getUsers())
     }, [])
 
     const users = useSelector((state) => state.users)
-   
-    console.log(users)
-    
-    function processLogin() {
 
-        // dispatch(login(users))
-        navigation.navigate('Feed')
+    // console.log(users.userList)
+
+    function processLogin(email, password) {
+        if (email === '' || password === '') {
+            Alert.alert('Email ou Senha inválidos')
+        } else if(login({ email, password }, users.userList) == 1){
+            Alert.alert('Email ou Senha inválidos')
+        } else {
+            dispatch(login({ email, password }, users.userList))
+            navigation.navigate('Feed')
+        }
     }
 
     function screenSignup() {
@@ -62,10 +73,10 @@ export default function Authenticate({ navigation }) {
                             placeholderTextColor="#DDDDDD"
                             autoCompleteType="email"
                             textContentType="emailAddress"
-                            returnKeyType="next"
+                            returnKeyType="done"
                             autoFocus={true}
                             value={email}
-                            onChangeText={setEmail}
+                            onChangeText={(mail) => setEmail(mail)}
                         />
                         <TextInput
                             style={styles.input}
@@ -74,7 +85,7 @@ export default function Authenticate({ navigation }) {
                             secureTextEntry={true}
                             returnKeyType="done"
                             value={password}
-                            onChangeText={setPassword}
+                            onChangeText={(pass) => setPassword(pass)}
                         />
                     </View>
 

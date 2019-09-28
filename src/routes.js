@@ -9,11 +9,14 @@ import Feed from './screens/Feed'
 import DetailEvent from './screens/DetailEvent'
 import DescriptionDetailed from './screens/DescriptionDetailed'
 import CalendarPicker from './screens/CalendarPicker/CalendarPicker'
+// import BuyScreen from './screens/BuyScreen'
+
 
 //Routes for screens navigation
 export default createAppContainer(
     createSwitchNavigator({
         Opening,
+        // BuyScreen,
         Feed,
         Signin,
         DetailEvent,
