@@ -36,7 +36,7 @@ Este projeto implementa uma API em .NetCore 3.0.
  
 * Todas as dependências do projeto são gerenciadas pelo nuget, para que ele restaure manualmente as bibliotecas: Update-Package -reinstall, para execução deste comando é indicado utilizar o terminal "Package Manager Console" do próprio visual studio
 
-- **Parte 2: Banco de dados**
+**3- Banco de dados**
 
 O banco de dados é SQL Server, para conexão utilizamos o ORM Entity Framework Core.
 
