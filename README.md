@@ -1,4 +1,4 @@
-# Manual Brinks API
+# Manual API
 
 Este projeto implementa uma API em .NetCore 3.0.
 
